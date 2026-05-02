@@ -1,0 +1,12 @@
+      family          = 0x6 (6)
+      model           = 0x5 (5)
+      stepping id     = 0x2 (2)
+      extended family = 0x0 (0)
+      extended model  = 0xc (12)
+      (family synth)  = 0x6 (6)
+      (model synth)   = 0xc5 (197)
+      brand index                    = 0x0 (0)
+   brand id = 0x00 (0): unknown
+      stepping id   = 0x00000000 (0)
+      native model ID of core = 0x3 (3)
+   brand = "Intel(R) Core(TM) Ultra 9 285H"

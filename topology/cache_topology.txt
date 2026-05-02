@@ -1,0 +1,60 @@
+=== cpu0 ===
+  L1 Data size=48K shared_with=0
+  L1 Instruction size=64K shared_with=0
+  L2 Unified size=3072K shared_with=0
+  L3 Unified size=24576K shared_with=0-13
+=== cpu1 ===
+  L1 Data size=48K shared_with=1
+  L1 Instruction size=64K shared_with=1
+  L2 Unified size=3072K shared_with=1
+  L3 Unified size=24576K shared_with=0-13
+=== cpu2 ===
+  L1 Data size=48K shared_with=2
+  L1 Instruction size=64K shared_with=2
+  L2 Unified size=3072K shared_with=2
+  L3 Unified size=24576K shared_with=0-13
+=== cpu3 ===
+  L1 Data size=48K shared_with=3
+  L1 Instruction size=64K shared_with=3
+  L2 Unified size=3072K shared_with=3
+  L3 Unified size=24576K shared_with=0-13
+=== cpu4 ===
+  L1 Data size=48K shared_with=4
+  L1 Instruction size=64K shared_with=4
+  L2 Unified size=3072K shared_with=4
+  L3 Unified size=24576K shared_with=0-13
+=== cpu5 ===
+  L1 Data size=48K shared_with=5
+  L1 Instruction size=64K shared_with=5
+  L2 Unified size=3072K shared_with=5
+  L3 Unified size=24576K shared_with=0-13
+=== cpu6 ===
+  L1 Data size=32K shared_with=6
+  L1 Instruction size=64K shared_with=6
+  L2 Unified size=4096K shared_with=6-9
+  L3 Unified size=24576K shared_with=0-13
+=== cpu7 ===
+  L1 Data size=32K shared_with=7
+  L1 Instruction size=64K shared_with=7
+  L2 Unified size=4096K shared_with=6-9
+  L3 Unified size=24576K shared_with=0-13
+=== cpu8 ===
+  L1 Data size=32K shared_with=8
+  L1 Instruction size=64K shared_with=8
+  L2 Unified size=4096K shared_with=6-9
+  L3 Unified size=24576K shared_with=0-13
+=== cpu9 ===
+  L1 Data size=32K shared_with=9
+  L1 Instruction size=64K shared_with=9
+  L2 Unified size=4096K shared_with=6-9
+  L3 Unified size=24576K shared_with=0-13
+=== cpu10 ===
+  L1 Data size=32K shared_with=10
+  L1 Instruction size=64K shared_with=10
+  L2 Unified size=4096K shared_with=10-13
+  L3 Unified size=24576K shared_with=0-13
+=== cpu11 ===
+  L1 Data size=32K shared_with=11
+  L1 Instruction size=64K shared_with=11
+  L2 Unified size=4096K shared_with=10-13
+  L3 Unified size=24576K shared_with=0-13

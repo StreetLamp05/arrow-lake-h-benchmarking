@@ -1,0 +1,10 @@
+=== thermal zones ===
+/sys/class/thermal/thermal_zone0: type=acpitz temp=51000 policy=user_space
+/sys/class/thermal/thermal_zone1: type=INT3400 Thermal temp=20000 policy=user_space
+/sys/class/thermal/thermal_zone2: type=SEN1 temp=42050 policy=user_space
+/sys/class/thermal/thermal_zone3: type=SEN2 temp=44050 policy=user_space
+/sys/class/thermal/thermal_zone4: type=SEN3 temp=44050 policy=user_space
+/sys/class/thermal/thermal_zone5: type=TCPU temp=51050 policy=user_space
+/sys/class/thermal/thermal_zone6: type=TCPU_PCI temp=51000 policy=user_space
+/sys/class/thermal/thermal_zone7: type=x86_pkg_temp temp=51000 policy=user_space
+/sys/class/thermal/thermal_zone8: type=iwlwifi_1 temp=45000 policy=user_space

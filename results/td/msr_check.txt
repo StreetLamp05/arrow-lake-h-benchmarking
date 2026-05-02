@@ -1,0 +1,25 @@
+=== IA32_THREAD_FEEDBACK_CHAR (MSR 0x17D2) readability check ===
+cpu  tier  raw_hex            valid  class_id 
+0    P     0x0000000000000000 0      0        
+1    P     0x0000000000000000 0      0        
+2    P     0x0000000000000000 0      0        
+3    P     0x0000000000000000 0      0        
+4    P     0x0000000000000000 0      0        
+5    P     0x0000000000000000 0      0        
+6    E     0x0000000000000000 0      0        
+7    E     0x0000000000000000 0      0        
+8    E     0x0000000000000000 0      0        
+9    E     0x0000000000000000 0      0        
+10   E     0x0000000000000000 0      0        
+11   E     0x0000000000000000 0      0        
+12   E     0x0000000000000000 0      0        
+13   E     0x0000000000000000 0      0        
+14   LPE   0x0000000000000000 0      0        
+15   LPE   0x0000000000000000 0      0        
+
+Interpretation:
+  - valid=1 means the hardware has a current classification for this CPU.
+  - valid=0 with class_id=0 is the 'never classified' state;
+    PMCSched [2] observed this persistently on E-cores on Alder Lake.
+  - A row of all zeros across every CPU suggests ITD is disabled in
+    firmware (BIOS Hardware Feedback / Thread Director toggle).

@@ -1,0 +1,16 @@
+cpu0 1024
+cpu1 1024
+cpu2 1024
+cpu3 1024
+cpu4 1024
+cpu5 1024
+cpu6 885
+cpu7 885
+cpu8 885
+cpu9 885
+cpu10 885
+cpu11 885
+cpu12 885
+cpu13 885
+cpu14 642
+cpu15 642

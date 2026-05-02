@@ -1,0 +1,60 @@
+=== MSR inspection ===
+IA32_HW_FEEDBACK_PTR    (0x17D0) — nonzero if kernel has allocated the feedback table
+  cpu 0  (P) : 0x0
+  cpu 6  (E) : 0x0
+  cpu 14 (LPE): 0x0
+
+IA32_HW_FEEDBACK_CONFIG (0x17D1) — bit 0 set = HFI enabled; bit 1 set = ITD enabled
+  cpu 0  (P) : 0x0
+  cpu 6  (E) : 0x0
+  cpu 14 (LPE): 0x0
+
+IA32_PACKAGE_THERM_STATUS (0x1B1) — HFI-related thermal status
+  cpu 0 : 0x88360800
+
+=== CPUID — does the CPU advertise HFI/ITD capability? ===
+CPUID leaf 0x06 EDX: bit 19 = HFI support, bit 23 = ITD support
+   0x00000006 0x00: eax=0x00df8ff7 ebx=0x00000002 ecx=0x00000409 edx=0x00060003
+
+=== Kernel HFI driver state ===
+- Loaded HFI module:
+  (no hfi module loaded)
+
+- dmesg mentions of HFI / Thread Director / hardware feedback:
+  (no relevant dmesg lines found)
+
+- Thermal/HFI sysfs entries:
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone0 -> ../../devices/virtual/thermal/thermal_zone0
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone1 -> ../../devices/virtual/thermal/thermal_zone1
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone2 -> ../../devices/virtual/thermal/thermal_zone2
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone3 -> ../../devices/virtual/thermal/thermal_zone3
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone4 -> ../../devices/virtual/thermal/thermal_zone4
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone5 -> ../../devices/virtual/thermal/thermal_zone5
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone6 -> ../../devices/virtual/thermal/thermal_zone6
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone7 -> ../../devices/virtual/thermal/thermal_zone7
+lrwxrwxrwx.  1 root root 0 Apr 21 00:26 thermal_zone8 -> ../../devices/virtual/thermal/thermal_zone8
+
+- Kernel config for HFI:
+CONFIG_INTEL_HFI_THERMAL=y
+
+=== Scheduler awareness of HFI ===
+- /sys/kernel/debug/sched/features (looking for HFI-related flags):
+  (no HFI-related sched features visible)
+
+- intel_pstate / HWP status:
+active
+
+=== Interpretation hint ===
+  - If 0x17D0 is ALL ZERO on every CPU: the kernel has not allocated a
+    feedback table. HFI is not set up by the OS, regardless of firmware.
+    Likely fix: kernel is missing CONFIG_INTEL_HFI_THERMAL=y, or the
+    intel_hfi module exists but failed to probe. Check dmesg.
+
+  - If 0x17D0 is NONZERO but 0x17D1 bit 0 is clear: HFI is configured
+    but disabled. Something disabled it (e.g. power setting, thermal
+    policy). Try enabling with msr write (risky; better to find the
+    kernel path that would re-enable it).
+
+  - If 0x17D0 and 0x17D1 both look right but 0x17D2 still all zeros:
+    ITD classification itself is gated. Check CPUID.06H EDX bit 23 and
+    BIOS "Intel Thread Director" / "Hardware Feedback" toggle.

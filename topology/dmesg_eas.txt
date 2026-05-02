@@ -1,0 +1,16 @@
+[    0.245416] ACPI: \_SB_.PEPD: Duplicate LPS0 _DSM functions (mask: 0x1)
+[    0.381524] Key type asymmetric registered
+[    0.381525] Asymmetric key parser 'x509' registered
+[    0.434019] i8042: PNP: PS/2 appears to have AUX port disabled, if this is incorrect please boot with i8042.nopnp
+[    0.437989] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    0.544437] PM: genpd: Disabling unused power domains
+[    0.691476] systemd[1]: systemd-pcrphase-initrd.service - TPM PCR Barrier (initrd) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[   33.214076] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[   33.214084] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[   33.229755] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   33.230160] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   33.240040] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[ 1067.626095] wlo1: deauthenticating from 0c:f4:d5:07:1f:6c by local choice (Reason: 3=DEAUTH_LEAVING)
+[15933.310610] wlo1: deauthenticating from 0c:f4:d5:07:1f:6c by local choice (Reason: 3=DEAUTH_LEAVING)
+[18005.211613] wlo1: deauthenticating from 0c:f4:d5:07:1f:6c by local choice (Reason: 3=DEAUTH_LEAVING)
+[19458.640636] wlo1: deauthenticating from 0c:f4:d5:07:1f:6c by local choice (Reason: 3=DEAUTH_LEAVING)

@@ -1,0 +1,40 @@
+
+legacy hardware:
+  branch-instructions
+       [Retired branch instructions [This event is an alias of branches].
+        Unit: cpu_atom]
+  branch-misses
+       [Mispredicted branch instructions. Unit: cpu_atom]
+  branches
+       [Retired branch instructions [This event is an alias of
+        branch-instructions]. Unit: cpu_atom]
+  bus-cycles
+       [Bus cycles,which can be different from total cycles. Unit: cpu_atom]
+  cache-misses
+       [Cache misses. Usually this indicates Last Level Cache misses; this is
+        intended to be used in conjunction with the
+        PERF_COUNT_HW_CACHE_REFERENCES event to calculate cache miss rates.
+        Unit: cpu_atom]
+  cache-references
+       [Cache accesses. Usually this indicates Last Level Cache accesses but
+        this may vary depending on your CPU. This may include prefetches and
+        coherency messages; again this depends on the design of your CPU.
+        Unit: cpu_atom]
+  cpu-cycles
+       [Total cycles. Be wary of what happens during CPU frequency scaling
+        [This event is an alias of cycles]. Unit: cpu_atom]
+  cycles
+       [Total cycles. Be wary of what happens during CPU frequency scaling
+        [This event is an alias of cpu-cycles]. Unit: cpu_atom]
+  instructions
+       [Retired instructions. Be careful,these can be affected by various
+        issues,most notably hardware interrupt counts. Unit: cpu_atom]
+  ref-cycles
+       [Total cycles; not affected by CPU frequency scaling. Unit: cpu_atom]
+  branch-instructions
+       [Retired branch instructions [This event is an alias of branches].
+        Unit: cpu_core]
+  branch-misses
+       [Mispredicted branch instructions. Unit: cpu_core]
+  branches
+       [Retired branch instructions [This event is an alias of
