@@ -5,6 +5,7 @@
 Requries:
 - Fedora 43 Workstation with kernel 6.17.1-300.fc43.x86_64
 - gcc 15.2.1
+  
 On the reference hardware, after a fresh boot:
 
 ```bash
